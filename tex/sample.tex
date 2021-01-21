@@ -1,0 +1,32 @@
+\documentclass[dvipdfmx,uplatex]{jsarticle}
+
+\usepackage[backend=biber]{biblatex}
+\addbibresource{sample.bib} % bibファイルを指定
+
+\usepackage[dvipdfmx]{graphicx} % png 図版用
+
+\title{ {\LaTeX} サンプル}
+\author{@nshun}
+\date{\today}
+
+\begin{document} % 本文開始
+\maketitle % タイトルを出力
+
+\section{章タイトル}
+
+図\ref{fig:sample}
+
+Sample title \cite{sample} より引用
+
+\begin{figure}[htbp] % 画像出力
+  \begin{center}
+    \includegraphics[width=50mm]{fig/sample.png}
+    % http://alexlenail.me/NN-SVG/AlexNet.html
+    \caption{サンプルイメージ}
+    \label{fig:sample}
+  \end{center}
+\end{figure}
+
+\printbibliography[title=参考文献] % 参考文献を表示
+
+\end{document}
